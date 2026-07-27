@@ -52,7 +52,6 @@ More photos in [`photos/`](photos/).
 
 ## What I learned debugging this
 
-- **Relay trigger polarity is not universal.** Relay modules differ between active-high and active-low trigger conventions, and a channel that "doesn't fire" is often just the opposite convention from what the code assumes. I verified the behavior of my module directly before trusting the firmware logic.
 - **Shared ground is non-negotiable.** With two supplies in the system, the logic side and the motor side must share a ground reference, or the relay control signals float.
 - **IR remotes are noisier than they look.** Between repeat frames and occasional decode glitches, the firmware needs to filter input rather than trust every frame.
 
